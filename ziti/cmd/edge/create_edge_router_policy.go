@@ -17,9 +17,10 @@
 package edge
 
 import (
+	"io"
+
 	"github.com/openziti/ziti/ziti/cmd/api"
 	cmdhelper "github.com/openziti/ziti/ziti/cmd/helpers"
-	"io"
 
 	"github.com/Jeffail/gabs"
 	"github.com/spf13/cobra"

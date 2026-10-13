@@ -17,11 +17,12 @@
 package create
 
 import (
+	"regexp"
+	"time"
+
 	"github.com/openziti/ziti/ziti/cmd/common"
 	cmdHelper "github.com/openziti/ziti/ziti/cmd/helpers"
 	"github.com/openziti/ziti/ziti/constants"
-	"regexp"
-	"time"
 
 	"github.com/openziti/channel/v2"
 	foundation "github.com/openziti/transport/v2"
@@ -51,7 +52,7 @@ type CreateConfigOptions struct {
 }
 
 type ConfigTemplateValues struct {
-	ZitiHome string
+	ZitiHome              string
 	HostnameOrNetworkName string
 
 	Controller ControllerTemplateValues

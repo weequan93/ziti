@@ -19,6 +19,11 @@ package network
 import (
 	"encoding/json"
 	"errors"
+	"math"
+	"strings"
+	"sync"
+	"time"
+
 	"github.com/michaelquigley/pfxlog"
 	"github.com/openziti/channel/v2/protobufs"
 	"github.com/openziti/foundation/v2/info"
@@ -27,11 +32,7 @@ import (
 	"github.com/openziti/ziti/common/pb/ctrl_pb"
 	"github.com/openziti/ziti/common/pb/mgmt_pb"
 	"github.com/openziti/ziti/controller/idgen"
-	"github.com/orcaman/concurrent-map/v2"
-	"math"
-	"strings"
-	"sync"
-	"time"
+	cmap "github.com/orcaman/concurrent-map/v2"
 )
 
 type linkController struct {

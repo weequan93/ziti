@@ -17,14 +17,15 @@
 package network
 
 import (
+	"sync/atomic"
+	"time"
+
 	"github.com/openziti/identity"
 	"github.com/openziti/storage/objectz"
 	"github.com/openziti/ziti/common/logcontext"
 	"github.com/openziti/ziti/controller/idgen"
 	"github.com/openziti/ziti/controller/xt"
-	"github.com/orcaman/concurrent-map/v2"
-	"sync/atomic"
-	"time"
+	cmap "github.com/orcaman/concurrent-map/v2"
 )
 
 type Circuit struct {

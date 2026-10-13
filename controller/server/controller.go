@@ -18,6 +18,10 @@ package server
 
 import (
 	"fmt"
+	"os"
+	"sync"
+	"time"
+
 	"github.com/michaelquigley/pfxlog"
 	"github.com/openziti/channel/v2"
 	"github.com/openziti/storage/boltz"
@@ -33,9 +37,6 @@ import (
 	_ "github.com/openziti/ziti/controller/internal/routes"
 	"github.com/openziti/ziti/controller/model"
 	sync2 "github.com/openziti/ziti/controller/sync_strats"
-	"os"
-	"sync"
-	"time"
 )
 
 type Controller struct {

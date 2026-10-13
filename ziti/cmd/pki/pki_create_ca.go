@@ -18,6 +18,10 @@ package pki
 
 import (
 	"fmt"
+	"io"
+	"net/url"
+	"strings"
+
 	"github.com/openziti/ziti/controller/idgen"
 	cmd2 "github.com/openziti/ziti/ziti/cmd/common"
 	cmdhelper "github.com/openziti/ziti/ziti/cmd/helpers"
@@ -27,9 +31,6 @@ import (
 	"github.com/openziti/ziti/ziti/pki/store"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"io"
-	"net/url"
-	"strings"
 )
 
 // PKICreateCAOptions the options for the create spring command

@@ -18,7 +18,6 @@ package main
 
 import (
 	"github.com/michaelquigley/pfxlog"
-	"github.com/openziti/ziti/common/build"
 	"github.com/openziti/transport/v2"
 	"github.com/openziti/transport/v2/tcp"
 	"github.com/openziti/transport/v2/tls"
@@ -27,6 +26,7 @@ import (
 	"github.com/openziti/transport/v2/udp"
 	"github.com/openziti/transport/v2/ws"
 	"github.com/openziti/transport/v2/wss"
+	"github.com/openziti/ziti/common/build"
 	"github.com/openziti/ziti/common/version"
 	"github.com/openziti/ziti/ziti/cmd"
 	"github.com/sirupsen/logrus"

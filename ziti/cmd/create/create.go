@@ -17,11 +17,12 @@
 package create
 
 import (
+	"io"
+
 	cmdhelper "github.com/openziti/ziti/ziti/cmd/helpers"
 	"github.com/openziti/ziti/ziti/cmd/pki"
 	"github.com/openziti/ziti/ziti/cmd/templates"
 	"github.com/spf13/cobra"
-	"io"
 )
 
 var (

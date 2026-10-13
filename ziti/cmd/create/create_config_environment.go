@@ -19,15 +19,16 @@ package create
 import (
 	_ "embed"
 	"fmt"
-	cmdhelper "github.com/openziti/ziti/ziti/cmd/helpers"
-	"github.com/openziti/ziti/ziti/cmd/templates"
-	"github.com/openziti/ziti/ziti/constants"
 	"os"
 	"path/filepath"
 	"runtime"
 	"strconv"
 	"strings"
 	"text/template"
+
+	cmdhelper "github.com/openziti/ziti/ziti/cmd/helpers"
+	"github.com/openziti/ziti/ziti/cmd/templates"
+	"github.com/openziti/ziti/ziti/constants"
 
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -80,7 +81,7 @@ func (options *CreateConfigEnvironmentOptions) addFlags(cmd *cobra.Command) {
 // NewCmdCreateConfigEnvironment creates a command object for the "environment" command
 func NewCmdCreateConfigEnvironment() *cobra.Command {
 	environmentOptions = &CreateConfigEnvironmentOptions{}
-	
+
 	data := &ConfigTemplateValues{}
 
 	cmd := &cobra.Command{
@@ -149,12 +150,12 @@ func NewCmdCreateConfigEnvironment() *cobra.Command {
 			// Figure out the correct comment prefix and variable declaration command
 			if runtime.GOOS == "windows" {
 				environmentOptions.OSCommentPrefix = "rem"
-				if ! environmentOptions.DisableOSVarDeclare {
+				if !environmentOptions.DisableOSVarDeclare {
 					environmentOptions.OSVarDeclare = "SET"
 				}
 			} else {
 				environmentOptions.OSCommentPrefix = "#"
-				if ! environmentOptions.DisableOSVarDeclare {
+				if !environmentOptions.DisableOSVarDeclare {
 					environmentOptions.OSVarDeclare = "export"
 				}
 			}

@@ -25,9 +25,9 @@ import (
 
 	"github.com/michaelquigley/pfxlog"
 	"github.com/openziti/agent"
-	"github.com/openziti/ziti/controller/server"
-	"github.com/openziti/ziti/controller"
 	"github.com/openziti/ziti/common/version"
+	"github.com/openziti/ziti/controller"
+	"github.com/openziti/ziti/controller/server"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
